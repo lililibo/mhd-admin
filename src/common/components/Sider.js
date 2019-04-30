@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon } from 'antd';
+import { NavLink } from 'react-router-dom';
 import store from '../../store';
 
 class Sider extends Component {
@@ -28,8 +29,10 @@ class Sider extends Component {
             this.state.menus.map((item,index) => {
               return (
                 <Menu.Item key={index + 1}>
-                  <Icon type={item.icon} />
-                  <span className="nav-text">{ item.name }</span>
+                  <NavLink exact to={item.href}>
+                    <Icon type={item.icon} />
+                    <span className="nav-text">{ item.name }</span>
+                  </NavLink>
                 </Menu.Item>
               )
             })
