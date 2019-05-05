@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import { NavLink } from 'react-router-dom';
-import store from '../../store';
+import store from '@/store';
 
 class Sider extends Component {
   constructor (props) {
